@@ -1,18 +1,16 @@
-import {
-  SearchCheck,
-  ClipboardList,
-  Rocket,
-  BarChart3,
-} from 'lucide-react'
+import step1 from '../assets/process/step1.png'
+import step2 from '../assets/process/step2.png'
+import step3 from '../assets/process/step3.png'
+import step4 from '../assets/process/step4.png'
 
 import { processSteps } from '../data/siteContent'
 import SectionHeader from './SectionHeader'
 
 const processIcons = [
-  SearchCheck,
-  ClipboardList,
-  Rocket,
-  BarChart3,
+  step1,
+  step2,
+  step3,
+  step4,
 ]
 
 const cardStyles = [
@@ -64,13 +62,13 @@ export default function Process() {
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {processSteps.map((step, index) => {
-              const Icon = processIcons[index]
+              const icon = processIcons[index]
               const style = cardStyles[index]
 
               return (
                 <article
                   key={step.step}
-                  className="motion-card group relative overflow-hidden rounded-[32px] border border-zinc-200 bg-white/80 p-6 shadow-sm backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-zinc-300 hover:shadow-2xl hover:shadow-zinc-900/10"
+                  className="motion-card group relative overflow-hidden rounded-4xl border border-zinc-200 bg-white/80 p-6 shadow-sm backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-zinc-300 hover:shadow-2xl hover:shadow-zinc-900/10"
                 >
                   {/* Glow */}
                   <div
@@ -87,21 +85,39 @@ export default function Process() {
 
                   <div className="relative z-10">
                     {/* Icon */}
-                    <div
-                      className={`flex h-14 w-14 items-center justify-center rounded-3xl ${style.iconBg} text-white shadow-xl transition duration-500 group-hover:scale-110`}
-                    >
-                      <Icon size={28} strokeWidth={2.3} />
+                    <div className="flex justify-center">
+                      <div className="relative transition duration-500 group-hover:-translate-y-1 group-hover:scale-110">
+
+                        {/* Glow */}
+                        <div
+                          className={`absolute inset-0 blur-2xl opacity-30 ${index === 0
+                            ? 'bg-red-300'
+                            : index === 1
+                              ? 'bg-sky-300'
+                              : index === 2
+                                ? 'bg-violet-300'
+                                : 'bg-orange-300'
+                            }`}
+                        />
+
+                        {/* Image */}
+                        <img
+                          src={icon}
+                          alt={step.title}
+                          className="relative z-10 h-24 w-24 object-contain drop-shadow-xl"
+                        />
+                      </div>
                     </div>
 
                     {/* Step Badge */}
                     <span
                       className={`mt-5 inline-flex items-center rounded-2xl px-4 py-2 text-sm font-black tracking-wide shadow-sm ${index === 0
-                          ? 'bg-linear-to-r from-red-500 to-pink-500 text-white'
-                          : index === 1
-                            ? 'bg-linear-to-r from-sky-500 to-cyan-500 text-white'
-                            : index === 2
-                              ? 'bg-linear-to-r from-violet-500 to-fuchsia-500 text-white'
-                              : 'bg-linear-to-r from-orange-500 to-amber-500 text-white'
+                        ? 'bg-linear-to-r from-red-500 to-pink-500 text-white'
+                        : index === 1
+                          ? 'bg-linear-to-r from-sky-500 to-cyan-500 text-white'
+                          : index === 2
+                            ? 'bg-linear-to-r from-violet-500 to-fuchsia-500 text-white'
+                            : 'bg-linear-to-r from-orange-500 to-amber-500 text-white'
                         }`}
                     >
                       Step {step.step}
@@ -116,17 +132,6 @@ export default function Process() {
                     <p className="mt-6 text-base leading-7 text-zinc-600">
                       {step.description}
                     </p>
-
-                    {/* Footer */}
-                    <div className="mt-8 flex items-center gap-3 border-t border-zinc-200 pt-5">
-                      <span
-                        className={`h-3 w-3 rounded-full ${style.iconBg}`}
-                      ></span>
-
-                      <span className="text-xs font-black uppercase tracking-[0.16em] text-zinc-500">
-                        Growth execution workflow
-                      </span>
-                    </div>
                   </div>
                 </article>
               )

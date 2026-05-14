@@ -1,0 +1,139 @@
+import {
+  SearchCheck,
+  ClipboardList,
+  Rocket,
+  BarChart3,
+} from 'lucide-react'
+
+import { processSteps } from '../data/siteContent'
+import SectionHeader from './SectionHeader'
+
+const processIcons = [
+  SearchCheck,
+  ClipboardList,
+  Rocket,
+  BarChart3,
+]
+
+const cardStyles = [
+  {
+    glow: 'from-emerald-400/20 via-lime-300/10 to-transparent',
+    iconBg: 'bg-emerald-500',
+    badge: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+  },
+  {
+    glow: 'from-sky-400/20 via-cyan-300/10 to-transparent',
+    iconBg: 'bg-sky-500',
+    badge: 'text-sky-700 bg-sky-50 border-sky-200',
+  },
+  {
+    glow: 'from-violet-400/20 via-fuchsia-300/10 to-transparent',
+    iconBg: 'bg-violet-500',
+    badge: 'text-violet-700 bg-violet-50 border-violet-200',
+  },
+  {
+    glow: 'from-orange-400/20 via-amber-300/10 to-transparent',
+    iconBg: 'bg-orange-500',
+    badge: 'text-orange-700 bg-orange-50 border-orange-200',
+  },
+]
+
+export default function Process() {
+  return (
+    <section
+      id="process"
+      className="relative overflow-hidden bg-[#fcfcf8] px-5 py-24 lg:px-8"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-grid opacity-40" />
+
+      <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-emerald-300/20 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-lime-200/20 blur-3xl" />
+
+      <div className="relative mx-auto max-w-7xl">
+        <SectionHeader
+          eyebrow="Process"
+          title="A streamlined workflow built for serious growth"
+          description="From onboarding to execution, every step is designed for clarity, speed, and measurable business outcomes."
+          align="center"
+        />
+
+        <div className="relative mt-20">
+          {/* Timeline */}
+          <div className="absolute left-1/2 top-10 hidden h-[85%] w-px -translate-x-1/2 bg-linear-to-b from-emerald-300 via-zinc-300 to-transparent xl:block" />
+
+          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+            {processSteps.map((step, index) => {
+              const Icon = processIcons[index]
+              const style = cardStyles[index]
+
+              return (
+                <article
+                  key={step.step}
+                  className="motion-card group relative overflow-hidden rounded-[32px] border border-zinc-200 bg-white/80 p-6 shadow-sm backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-zinc-300 hover:shadow-2xl hover:shadow-zinc-900/10"
+                >
+                  {/* Glow */}
+                  <div
+                    className={`absolute inset-0 bg-linear-to-br ${style.glow} opacity-0 transition duration-500 group-hover:opacity-100`}
+                  />
+
+                  {/* Big Number */}
+                  <div className="absolute right-6 top-5 text-6xl font-black tracking-tight text-zinc-100 transition duration-500 group-hover:scale-110">
+                    0{index + 1}
+                  </div>
+
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 top-0 hidden h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white bg-emerald-500 shadow-lg shadow-emerald-300/40 xl:block"></div>
+
+                  <div className="relative z-10">
+                    {/* Icon */}
+                    <div
+                      className={`flex h-14 w-14 items-center justify-center rounded-3xl ${style.iconBg} text-white shadow-xl transition duration-500 group-hover:scale-110`}
+                    >
+                      <Icon size={28} strokeWidth={2.3} />
+                    </div>
+
+                    {/* Step Badge */}
+                    <span
+                      className={`mt-5 inline-flex items-center rounded-2xl px-4 py-2 text-sm font-black tracking-wide shadow-sm ${index === 0
+                          ? 'bg-linear-to-r from-red-500 to-pink-500 text-white'
+                          : index === 1
+                            ? 'bg-linear-to-r from-sky-500 to-cyan-500 text-white'
+                            : index === 2
+                              ? 'bg-linear-to-r from-violet-500 to-fuchsia-500 text-white'
+                              : 'bg-linear-to-r from-orange-500 to-amber-500 text-white'
+                        }`}
+                    >
+                      Step {step.step}
+                    </span>
+
+                    {/* Title */}
+                    <h3 className="mt-6 text-2xl font-black leading-tight tracking-tight text-zinc-950">
+                      {step.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="mt-6 text-base leading-7 text-zinc-600">
+                      {step.description}
+                    </p>
+
+                    {/* Footer */}
+                    <div className="mt-8 flex items-center gap-3 border-t border-zinc-200 pt-5">
+                      <span
+                        className={`h-3 w-3 rounded-full ${style.iconBg}`}
+                      ></span>
+
+                      <span className="text-xs font-black uppercase tracking-[0.16em] text-zinc-500">
+                        Growth execution workflow
+                      </span>
+                    </div>
+                  </div>
+                </article>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}

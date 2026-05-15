@@ -1,12 +1,17 @@
 {
-  "name": "backend",
+  "name": "xitamin-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "API backend for the Xitamin website",
   "license": "ISC",
-  "author": "",
+  "author": "Xitamin",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

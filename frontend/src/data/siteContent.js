@@ -1,9 +1,12 @@
 export const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Marketplaces', href: '#marketplaces' },
-  { label: 'Process', href: '#process' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'E-Commerce', href: '/e-commerce' },
+  { label: 'Financial', href: '/financial' },
+  { label: 'Digital Marketing', href: '/digital-marketing' },
+  { label: 'Tech Solutions', href: '/tech-solutions' },
+  { label: 'Career', href: '/career' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '#contact' },
 ]
 

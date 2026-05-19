@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+<<<<<<< HEAD:frontend/src/components/home/Hero.jsx
 import heroGraphic from '../../assets/hero.png'
 import { heroRotatingWords, heroServices, heroSignals, stats } from '../../data/siteContent'
+=======
+import heroGraphic from '../assets/hero.png'
+import { heroRotatingWords, heroServices, heroSignals, stats } from '../data/siteContent'
+import LogoModel from './LogoModel'
+>>>>>>> 0b8a055853b9663f7cd1cad5191146b29635d3c6:frontend/src/components/Hero.jsx
 
 export default function Hero() {
   const [activeWordIndex, setActiveWordIndex] = useState(0)
@@ -54,7 +60,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grid opacity-70" />
       <div className="hero-ambient hero-ambient-one" />
       <div className="hero-ambient hero-ambient-two" />
-      <div className="relative mx-auto grid min-h-[calc(100vh-69px)] max-w-7xl items-center gap-12 px-5 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
+      <div className="relative mx-auto grid min-h-[calc(100vh-90px)] max-w-7xl gap-12 px-5 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
         <div>
           <p className="hero-kicker inline-flex rounded-lg border border-orange-200 bg-white/90 px-3 py-1.5 text-sm font-semibold text-orange-700 shadow-sm">
             Amazon, Flipkart, SEO, finance, legal, and web development services
@@ -66,7 +72,6 @@ export default function Hero() {
                 {activeWord}
               </span>
             </span>
-            .
           </h1>
           <p className="hero-copy mt-6 max-w-2xl text-lg leading-8 text-zinc-600 sm:text-xl">
             Xitamin helps online sellers scale with Amazon management, Flipkart account support, marketplace SEO,
@@ -88,16 +93,24 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="hero-tags mt-10 flex flex-wrap gap-2" aria-label="Xitamin service keywords">
+          {/* <div>
+            <LogoModel/>
+          </div> */}
+
+          {/* <div className="hero-tags mt-10 flex flex-wrap gap-2" aria-label="Xitamin service keywords">
             {heroServices.map((service) => (
               <span key={service} className="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-zinc-700 shadow-sm">
                 {service}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
 
-        <div className="hero-perspective relative">
+        <div>
+          <LogoModel/>
+        </div>
+
+        {/* <div className="hero-perspective relative">
           <div className="hero-orbit hero-orbit-one" />
           <div className="hero-orbit hero-orbit-two" />
           <div
@@ -172,7 +185,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

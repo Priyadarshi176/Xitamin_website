@@ -28,7 +28,7 @@ export default function Header() {
       </a>
 
       <nav
-        className="mx-auto flex max-w-7xl items-center  justify-between px-5 py-4 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between py-4"
         aria-label="Primary"
       >
         {/* Logo */}
@@ -37,16 +37,20 @@ export default function Header() {
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden items-center gap-1 rounded-2xl border border-zinc-200/80 bg-white/10 p-1.5 shadow-sm backdrop-blur-xl lg:flex">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="rounded-xl px-4 py-2.5 text-sm font-bold text-zinc-600 transition-all duration-300 hover:bg-zinc-950 hover:text-white"
-            >
-              {item.label}
-            </a>
-          ))}
+        <div className='flex gap-5 hidden lg:flex md:flex flex-wrap'>
+          {navItems.map((item,i)=>{
+            return(
+            <div key={i} onClick={()=>{window.location.href=item.href}} className="relative overflow-hidden h-6 cursor-pointer group">
+              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+                {item.label}
+              </span>
+
+              <span className="block absolute top-full left-0 transition-transform duration-300 group-hover:-translate-y-full text-[#ff6200]">
+                {item.label}
+              </span>
+            </div>
+            )
+          })}
         </div>
 
         {/* Right Actions */}
@@ -116,3 +120,7 @@ export default function Header() {
     </header>
   )
 }
+<<<<<<< HEAD:frontend/src/components/common/Header.jsx
+=======
+// onClick={() => {document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});}}
+>>>>>>> 0b8a055853b9663f7cd1cad5191146b29635d3c6:frontend/src/components/Header.jsx

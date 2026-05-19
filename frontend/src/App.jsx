@@ -1,6 +1,4 @@
 // src/App.jsx
-
-import LogoModel from './components/LogoModel'
 import MainLayout from './layouts/MainLayout'
 import AppRoutes from './routes/AppRoutes'
 

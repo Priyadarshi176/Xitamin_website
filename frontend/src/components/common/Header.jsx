@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { navItems } from '../data/siteContent'
+import { navItems } from '../../data/siteContent'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -53,8 +53,8 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* CTA */}
           <a
-            href="#contact"
-            className="premium-button hidden rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-black text-white shadow-lg shadow-zinc-950/15 transition-all duration-300 hover:-translate-y-1 hover:bg-emerald-600 lg:inline-flex"
+            href="/contact"
+            className="premium-button hidden rounded-2xl bg-zinc-950 px-5 py-3 text-sm font-black text-white shadow-lg shadow-zinc-950/15 transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 lg:inline-flex"
           >
             Request Callback
           </a>
@@ -62,7 +62,7 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-sm transition hover:border-emerald-300 hover:text-emerald-600 lg:hidden"
+            className="flex h-12 w-12 items-center justify-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-sm transition hover:border-orange-300 hover:text-orange-600 lg:hidden"
             aria-label="Toggle menu"
           >
             <div className="flex flex-col gap-1.5">
@@ -105,9 +105,9 @@ export default function Header() {
           ))}
 
           <a
-            href="#contact"
+            href="/contact"
             onClick={() => setMobileMenu(false)}
-            className="mt-3 rounded-2xl bg-zinc-950 px-5 py-3 text-center text-sm font-black text-white transition-all duration-300 hover:bg-emerald-600"
+            className="mt-3 rounded-2xl bg-zinc-950 px-5 py-3 text-center text-sm font-black text-white transition-all duration-300 hover:bg-orange-600"
           >
             Get a plan
           </a>

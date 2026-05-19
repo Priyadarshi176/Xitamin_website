@@ -1,10 +1,12 @@
 export const navItems = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Marketplaces', href: '#marketplaces' },
-  { label: 'Process', href: '#process' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Marketplaces', href: '/#marketplaces' },
+  { label: 'Process', href: '/#process' },
+  { label: 'FAQ', href: '/#faq' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export const heroServices = [

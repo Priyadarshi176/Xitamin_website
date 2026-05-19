@@ -1,12 +1,12 @@
 import { marketplaces } from '../data/siteContent'
-import SectionHeader from './SectionHeader'
+import SectionHeader from '../components/common/SectionHeader'
 
 const marketplaceDetails = {
   Amazon: {
     tag: 'Global commerce',
     description: 'Catalog SEO, PPC scaling, account health, and international growth systems.',
     metric: '500+ optimized listings',
-    glow: 'from-orange-400/20 via-amber-300/10 to-transparent',
+    glow: 'from-orange-400/20 via-orange-300/10 to-transparent',
     border: 'group-hover:border-orange-300/60',
   },
   Flipkart: {
@@ -20,8 +20,8 @@ const marketplaceDetails = {
     tag: 'Fashion commerce',
     description: 'Brand visibility, apparel catalog structuring, and campaign execution.',
     metric: 'Fashion-first optimization',
-    glow: 'from-pink-400/20 via-rose-300/10 to-transparent',
-    border: 'group-hover:border-pink-300/60',
+    glow: 'from-red-400/20 via-rose-300/10 to-transparent',
+    border: 'group-hover:border-red-300/60',
   },
   Ajio: {
     tag: 'Lifestyle marketplace',
@@ -34,8 +34,8 @@ const marketplaceDetails = {
     tag: 'Quick commerce',
     description: 'Rapid inventory systems and high-velocity operational support.',
     metric: 'Fast-moving catalog handling',
-    glow: 'from-yellow-400/20 via-lime-300/10 to-transparent',
-    border: 'group-hover:border-yellow-300/60',
+    glow: 'from-orange-400/20 via-orange-300/10 to-transparent',
+    border: 'group-hover:border-orange-300/60',
   },
   'Tata Cliq': {
     tag: 'Premium retail',
@@ -62,8 +62,8 @@ const marketplaceDetails = {
     tag: 'International expansion',
     description: 'Cross-border growth systems, compliance, and global catalog management.',
     metric: 'Global seller workflows',
-    glow: 'from-emerald-400/20 via-lime-300/10 to-transparent',
-    border: 'group-hover:border-emerald-300/60',
+    glow: 'from-orange-400/20 via-orange-300/10 to-transparent',
+    border: 'group-hover:border-orange-300/60',
   },
 }
 
@@ -75,8 +75,8 @@ export default function MarketplaceExpertise() {
     >
       <div className="absolute inset-0 bg-grid opacity-60" />
 
-      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
-      <div className="absolute bottom-10 right-0 h-72 w-72 rounded-full bg-lime-200/20 blur-3xl" />
+      <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl" />
+      <div className="absolute bottom-10 right-0 h-72 w-72 rounded-full bg-orange-200/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
@@ -111,7 +111,7 @@ export default function MarketplaceExpertise() {
                       </h3>
                     </div>
 
-                    <div className="grid h-14 w-14 place-items-center rounded-2xl border border-zinc-200 bg-white text-sm font-black text-zinc-950 shadow-sm transition duration-300 group-hover:scale-110 group-hover:border-emerald-300">
+                    <div className="grid h-14 w-14 place-items-center rounded-2xl border border-zinc-200 bg-white text-sm font-black text-zinc-950 shadow-sm transition duration-300 group-hover:scale-110 group-hover:border-orange-300">
                       {String(index + 1).padStart(2, '0')}
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export default function MarketplaceExpertise() {
                   </p>
 
                   <div className="mt-8 flex items-center justify-between border-t border-zinc-200 pt-5">
-                    <span className="text-sm font-bold text-emerald-700">
+                    <span className="text-sm font-bold text-orange-700">
                       {details.metric}
                     </span>
                   </div>

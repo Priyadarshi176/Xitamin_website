@@ -43,9 +43,9 @@ textarea {
   z-index: 80;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #10b981, #bef264, #14b8a6);
+  background: linear-gradient(90deg, #ff6200, #f97316, #dc2626);
   transform-origin: left;
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.45);
+  box-shadow: 0 0 20px rgba(255, 98, 0, 0.45);
 }
 
 .has-premium-cursor,
@@ -78,8 +78,8 @@ textarea {
 .cursor-dot {
   width: 0.55rem;
   height: 0.55rem;
-  background: #10b981;
-  box-shadow: 0 0 18px rgba(16, 185, 129, 0.85);
+  background: #ff6200;
+  box-shadow: 0 0 18px rgba(255, 98, 0, 0.85);
   transition: opacity 160ms ease, scale 160ms ease;
 }
 
@@ -88,7 +88,7 @@ textarea {
   height: 2.6rem;
   border: 1px solid rgba(24, 24, 27, 0.42);
   background:
-    radial-gradient(circle, rgba(16, 185, 129, 0.12), transparent 58%);
+    radial-gradient(circle, rgba(255, 98, 0, 0.12), transparent 58%);
   backdrop-filter: blur(1px);
   transition:
     width 220ms ease,
@@ -101,9 +101,9 @@ textarea {
 .cursor-ring.is-hovering {
   width: 4.1rem;
   height: 4.1rem;
-  border-color: rgba(16, 185, 129, 0.72);
+  border-color: rgba(255, 98, 0, 0.72);
   background:
-    radial-gradient(circle, rgba(16, 185, 129, 0.18), rgba(190, 242, 100, 0.08) 48%, transparent 68%);
+    radial-gradient(circle, rgba(255, 98, 0, 0.18), rgba(220, 38, 38, 0.08) 48%, transparent 68%);
 }
 
 .cursor-dot.is-pressed {
@@ -113,7 +113,7 @@ textarea {
 .cursor-ring.is-pressed {
   width: 2rem;
   height: 2rem;
-  border-color: rgba(16, 185, 129, 0.95);
+  border-color: rgba(255, 98, 0, 0.95);
 }
 
 .cursor-dot.is-hidden,
@@ -148,7 +148,7 @@ textarea {
   place-items: center;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 0.75rem;
-  background: linear-gradient(135deg, #ffffff, #bbf7d0);
+  background: linear-gradient(135deg, #ffffff, #ffedd5);
   color: #09090b;
   font-size: 1.5rem;
   font-weight: 950;
@@ -168,7 +168,7 @@ textarea {
   width: 45%;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, transparent, #34d399, #bef264);
+  background: linear-gradient(90deg, transparent, #ff6200, #dc2626);
   animation: loader-scan 950ms cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
 
@@ -223,13 +223,13 @@ textarea {
 .dynamic-word-wrap {
   display: inline-grid;
   min-width: min(9.3em, 100%);
-  color: #047857;
+  color: #c2410c;
   vertical-align: baseline;
 }
 
 .dynamic-word {
   grid-area: 1 / 1;
-  background: linear-gradient(90deg, #047857, #10b981 48%, #18181b);
+  background: linear-gradient(90deg, #c2410c, #ff6200 48%, #18181b);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: word-swap 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -257,8 +257,8 @@ textarea {
   background:
     radial-gradient(
       34rem circle at var(--spotlight-x, 50%) var(--spotlight-y, 50%),
-      rgba(16, 185, 129, 0.18),
-      rgba(190, 242, 100, 0.05) 34%,
+      rgba(255, 98, 0, 0.18),
+      rgba(220, 38, 38, 0.05) 34%,
       transparent 62%
     );
   opacity: 0.95;
@@ -281,7 +281,7 @@ textarea {
   top: 8rem;
   width: 22rem;
   height: 22rem;
-  background: rgba(16, 185, 129, 0.16);
+  background: rgba(255, 98, 0, 0.16);
   filter: blur(70px);
   animation: ambient-drift 9s ease-in-out infinite;
 }
@@ -291,7 +291,7 @@ textarea {
   bottom: 2rem;
   width: 18rem;
   height: 18rem;
-  background: rgba(190, 242, 100, 0.16);
+  background: rgba(220, 38, 38, 0.16);
   filter: blur(80px);
   animation: ambient-drift 11s ease-in-out infinite reverse;
 }
@@ -301,7 +301,7 @@ textarea {
   top: -1.5rem;
   width: 8rem;
   height: 8rem;
-  border: 1px solid rgba(16, 185, 129, 0.28);
+  border: 1px solid rgba(255, 98, 0, 0.28);
   animation: orbit-float 6s ease-in-out infinite;
 }
 
@@ -525,7 +525,7 @@ textarea {
 a,
 button,
 summary {
-  outline-color: #059669;
+  outline-color: #ff6200;
   outline-offset: 4px;
 }
 
@@ -547,8 +547,8 @@ summary {
 }
 
 ::selection {
-  color: #052e16;
-  background: #bbf7d0;
+  color: #431407;
+  background: #ffedd5;
 }
 
 @media (hover: none), (pointer: coarse) {

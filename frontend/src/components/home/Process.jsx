@@ -1,10 +1,10 @@
-import step1 from '../assets/process/step1.png'
-import step2 from '../assets/process/step2.png'
-import step3 from '../assets/process/step3.png'
-import step4 from '../assets/process/step4.png'
+import step1 from '../../assets/process/step1.png'
+import step2 from '../../assets/process/step2.png'
+import step3 from '../../assets/process/step3.png'
+import step4 from '../../assets/process/step4.png'
 
-import { processSteps } from '../data/siteContent'
-import SectionHeader from './SectionHeader'
+import { processSteps } from '../../data/siteContent'
+import SectionHeader from '../common/SectionHeader'
 
 const processIcons = [
   step1,
@@ -15,9 +15,9 @@ const processIcons = [
 
 const cardStyles = [
   {
-    glow: 'from-emerald-400/20 via-lime-300/10 to-transparent',
-    iconBg: 'bg-emerald-500',
-    badge: 'text-emerald-700 bg-emerald-50 border-emerald-200',
+    glow: 'from-orange-400/20 via-orange-300/10 to-transparent',
+    iconBg: 'bg-orange-500',
+    badge: 'text-orange-700 bg-orange-50 border-orange-200',
   },
   {
     glow: 'from-sky-400/20 via-cyan-300/10 to-transparent',
@@ -30,7 +30,7 @@ const cardStyles = [
     badge: 'text-violet-700 bg-violet-50 border-violet-200',
   },
   {
-    glow: 'from-orange-400/20 via-amber-300/10 to-transparent',
+    glow: 'from-orange-400/20 via-orange-300/10 to-transparent',
     iconBg: 'bg-orange-500',
     badge: 'text-orange-700 bg-orange-50 border-orange-200',
   },
@@ -45,8 +45,8 @@ export default function Process() {
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-40" />
 
-      <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-emerald-300/20 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-lime-200/20 blur-3xl" />
+      <div className="absolute left-0 top-20 h-80 w-80 rounded-full bg-orange-300/20 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-orange-200/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <SectionHeader
@@ -58,7 +58,7 @@ export default function Process() {
 
         <div className="relative mt-20">
           {/* Timeline */}
-          <div className="absolute left-1/2 top-10 hidden h-[85%] w-px -translate-x-1/2 bg-linear-to-b from-emerald-300 via-zinc-300 to-transparent xl:block" />
+          <div className="absolute left-1/2 top-10 hidden h-[85%] w-px -translate-x-1/2 bg-linear-to-b from-orange-300 via-zinc-300 to-transparent xl:block" />
 
           <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
             {processSteps.map((step, index) => {
@@ -81,7 +81,7 @@ export default function Process() {
                   </div>
 
                   {/* Timeline Dot */}
-                  <div className="absolute left-1/2 top-0 hidden h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white bg-emerald-500 shadow-lg shadow-emerald-300/40 xl:block"></div>
+                  <div className="absolute left-1/2 top-0 hidden h-5 w-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white bg-orange-500 shadow-lg shadow-orange-300/40 xl:block"></div>
 
                   <div className="relative z-10">
                     {/* Icon */}
@@ -112,12 +112,12 @@ export default function Process() {
                     {/* Step Badge */}
                     <span
                       className={`mt-5 inline-flex items-center rounded-2xl px-4 py-2 text-sm font-black tracking-wide shadow-sm ${index === 0
-                        ? 'bg-linear-to-r from-red-500 to-pink-500 text-white'
+                        ? 'bg-linear-to-r from-red-500 to-red-500 text-white'
                         : index === 1
                           ? 'bg-linear-to-r from-sky-500 to-cyan-500 text-white'
                           : index === 2
                             ? 'bg-linear-to-r from-violet-500 to-fuchsia-500 text-white'
-                            : 'bg-linear-to-r from-orange-500 to-amber-500 text-white'
+                            : 'bg-linear-to-r from-orange-500 to-orange-500 text-white'
                         }`}
                     >
                       Step {step.step}

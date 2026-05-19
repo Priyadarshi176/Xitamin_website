@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import heroGraphic from '../assets/hero.png'
-import { heroRotatingWords, heroServices, heroSignals, stats } from '../data/siteContent'
+import heroGraphic from '../../assets/hero.png'
+import { heroRotatingWords, heroServices, heroSignals, stats } from '../../data/siteContent'
 
 export default function Hero() {
   const [activeWordIndex, setActiveWordIndex] = useState(0)
@@ -56,7 +56,7 @@ export default function Hero() {
       <div className="hero-ambient hero-ambient-two" />
       <div className="relative mx-auto grid min-h-[calc(100vh-69px)] max-w-7xl items-center gap-12 px-5 py-16 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:px-8">
         <div>
-          <p className="hero-kicker inline-flex rounded-lg border border-emerald-200 bg-white/90 px-3 py-1.5 text-sm font-semibold text-emerald-700 shadow-sm">
+          <p className="hero-kicker inline-flex rounded-lg border border-orange-200 bg-white/90 px-3 py-1.5 text-sm font-semibold text-orange-700 shadow-sm">
             Amazon, Flipkart, SEO, finance, legal, and web development services
           </p>
           <h1 className="hero-title mt-6 max-w-4xl text-5xl font-black leading-[0.96] text-zinc-950 sm:text-6xl lg:text-7xl">
@@ -110,7 +110,7 @@ export default function Hero() {
             <div className="hero-spotlight" />
             <div className="flex items-center justify-between border-b border-white/10 pb-5">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-emerald-300">Xitamin command center</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">Xitamin command center</p>
                 <p className="mt-1 text-sm text-zinc-400">Seller growth overview</p>
               </div>
               <img
@@ -123,7 +123,7 @@ export default function Hero() {
 
             <div className="grid gap-5 py-6 lg:grid-cols-[1fr_0.82fr]">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-emerald-300">Growth desk</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-orange-300">Growth desk</p>
                 <h2 className="mt-3 text-3xl font-black leading-tight">
                   One operating team for serious online sellers.
                 </h2>
@@ -136,7 +136,7 @@ export default function Hero() {
                           {signal.state}
                         </span>
                       </span>
-                      <span className="rounded-md bg-emerald-400/10 px-2.5 py-1 text-xs font-black text-emerald-300">
+                      <span className="rounded-md bg-orange-400/10 px-2.5 py-1 text-xs font-black text-orange-300">
                         {signal.value}
                       </span>
                     </div>
@@ -146,7 +146,7 @@ export default function Hero() {
 
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="border-l border-emerald-300/40 pl-4">
+                  <div key={stat.label} className="border-l border-orange-300/40 pl-4">
                     <p className="text-2xl font-black text-white">{stat.value}</p>
                     <p className="mt-1 text-sm leading-5 text-zinc-400">{stat.label}</p>
                   </div>
@@ -157,7 +157,7 @@ export default function Hero() {
             <div className="grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-3" aria-label="Growth workflow">
               {['Audit', 'Optimize', 'Scale'].map((item, index) => (
                 <div key={item} className="rounded-lg bg-white/5 p-4">
-                  <span className="mb-2 block text-xs font-black uppercase tracking-[0.16em] text-emerald-300">
+                  <span className="mb-2 block text-xs font-black uppercase tracking-[0.16em] text-orange-300">
                     0{index + 1}
                   </span>
                   <span className="font-black text-white">{item}</span>

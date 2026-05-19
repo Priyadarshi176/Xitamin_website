@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import {
   HelpCircle,
-  Sparkles,
   ShieldCheck,
   MessagesSquare,
   ArrowRight,
 } from 'lucide-react'
 
-import { faqs } from '../data/siteContent'
-import SectionHeader from './SectionHeader'
+import { faqs } from '../../data/siteContent'
+import SectionHeader from '../common/SectionHeader'
 
 export default function Faq() {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -25,8 +24,8 @@ export default function Faq() {
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-40" />
 
-      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-emerald-300/20 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-lime-200/20 blur-3xl" />
+      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-orange-300/20 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-orange-200/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid gap-14 lg:grid-cols-[0.42fr_0.58fr]">
@@ -41,10 +40,10 @@ export default function Faq() {
             {/* Main Support Card */}
             <div className="motion-card relative mt-10 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white/80 p-8 shadow-2xl shadow-zinc-900/5 backdrop-blur-2xl">
               {/* Glow */}
-              <div className="absolute inset-0 bg-linear-to-br from-emerald-400/10 via-lime-200/5 to-transparent"></div>
+              <div className="absolute inset-0 bg-linear-to-br from-orange-400/10 via-orange-200/5 to-transparent"></div>
 
               {/* Decorative circles */}
-              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full border border-emerald-200/40"></div>
+              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full border border-orange-200/40"></div>
 
               <div className="relative z-10">
                 <div className="flex items-center gap-4">
@@ -53,7 +52,7 @@ export default function Faq() {
                   </div>
 
                   <div>
-                    <p className="text-sm font-black uppercase tracking-[0.16em] text-emerald-600">
+                    <p className="text-sm font-black uppercase tracking-[0.16em] text-orange-600">
                       Dedicated support
                     </p>
 
@@ -80,7 +79,7 @@ export default function Faq() {
                       key={item}
                       className="flex items-center gap-3 rounded-2xl border border-zinc-200 bg-white/70 px-4 py-3"
                     >
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-100 text-orange-700">
                         <ShieldCheck size={18} />
                       </div>
 
@@ -94,7 +93,7 @@ export default function Faq() {
                 {/* CTA */}
                 <a
                   href="#contact"
-                  className="premium-button mt-8 inline-flex items-center gap-3 rounded-2xl bg-zinc-950 px-6 py-3.5 text-sm font-black text-white transition duration-300 hover:-translate-y-1 hover:bg-emerald-600"
+                  className="premium-button mt-8 inline-flex items-center gap-3 rounded-2xl bg-zinc-950 px-6 py-3.5 text-sm font-black text-white transition duration-300 hover:-translate-y-1 hover:bg-orange-600"
                 >
                   Talk with team
                   <ArrowRight size={18} />
@@ -132,13 +131,13 @@ export default function Faq() {
                   key={faq.question}
                   className={`motion-card group relative overflow-hidden rounded-3xl border transition-all duration-500 ${
                     isActive
-                      ? 'border-emerald-300 bg-white shadow-2xl shadow-emerald-100/50'
-                      : 'border-zinc-200 bg-white/80 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-xl hover:shadow-zinc-900/5'
+                      ? 'border-orange-300 bg-white shadow-2xl shadow-orange-100/50'
+                      : 'border-zinc-200 bg-white/80 hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl hover:shadow-zinc-900/5'
                   }`}
                 >
                   {/* Glow */}
                   <div
-                    className={`absolute inset-0 bg-linear-to-br from-emerald-400/10 via-lime-200/5 to-transparent transition duration-500 ${
+                    className={`absolute inset-0 bg-linear-to-br from-orange-400/10 via-orange-200/5 to-transparent transition duration-500 ${
                       isActive
                         ? 'opacity-100'
                         : 'opacity-0 group-hover:opacity-100'
@@ -155,8 +154,8 @@ export default function Faq() {
   <div
     className={`absolute inset-0 rounded-2xl blur-xl transition duration-500 ${
       isActive
-        ? 'bg-emerald-300/40'
-        : 'bg-zinc-200/40 group-hover:bg-emerald-200/40'
+        ? 'bg-orange-300/40'
+        : 'bg-zinc-200/40 group-hover:bg-orange-200/40'
     }`}
   />
 
@@ -164,19 +163,19 @@ export default function Faq() {
   <div
     className={`relative flex h-12 w-12 items-center justify-center rounded-2xl border transition-all duration-500 ${
       isActive
-        ? 'border-emerald-200 bg-white shadow-xl shadow-emerald-100'
+        ? 'border-orange-200 bg-white shadow-xl shadow-orange-100'
         : 'border-zinc-200 bg-white/90'
     }`}
   >
     {/* Animated Ring */}
-    <div className="absolute inset-0 rounded-2xl border border-emerald-300/40 animate-ping opacity-30"></div>
+    <div className="absolute inset-0 rounded-2xl border border-orange-300/40 animate-ping opacity-30"></div>
 
     {/* Question Icon */}
     <div
       className={`relative z-10 flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
         isActive
-          ? 'bg-emerald-600 text-white'
-          : 'bg-zinc-950 text-white group-hover:bg-emerald-600'
+          ? 'bg-orange-600 text-white'
+          : 'bg-zinc-950 text-white group-hover:bg-orange-600'
       }`}
     >
       <HelpCircle size={15} strokeWidth={2.8} />
@@ -195,7 +194,7 @@ export default function Faq() {
                           <h3
                             className={`max-w-2xl text-base font-black leading-7 transition-colors duration-300 sm:text-lg ${
                               isActive
-                                ? 'text-emerald-700'
+                                ? 'text-orange-700'
                                 : 'text-zinc-950'
                             }`}
                           >
@@ -207,7 +206,7 @@ export default function Faq() {
                         <div
                           className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border transition-all duration-500 ${
                             isActive
-                              ? 'rotate-180 border-emerald-200 bg-emerald-50 text-emerald-700'
+                              ? 'rotate-180 border-orange-200 bg-orange-50 text-orange-700'
                               : 'border-zinc-200 bg-white text-zinc-500'
                           }`}
                         >
@@ -243,7 +242,7 @@ export default function Faq() {
                             </p>
 
                             <div className="mt-6 flex flex-wrap items-center gap-3">
-                              <span className="rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-emerald-700">
+                              <span className="rounded-full bg-orange-50 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-orange-700">
                                 Trusted Support
                               </span>
 
@@ -251,7 +250,7 @@ export default function Faq() {
                                 Seller Growth
                               </span>
 
-                              <span className="rounded-full bg-lime-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-lime-700">
+                              <span className="rounded-full bg-orange-100 px-3 py-1 text-[11px] font-black uppercase tracking-[0.16em] text-orange-700">
                                 Marketplace Experts
                               </span>
                             </div>

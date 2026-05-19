@@ -1,4 +1,4 @@
-import { contact, navItems } from '../data/siteContent'
+import { contact, navItems } from '../../data/siteContent'
 
 export default function Footer() {
   return (

@@ -12,8 +12,8 @@ import {
   Store,
 } from 'lucide-react'
 
-import { services } from '../data/siteContent'
-import SectionHeader from './SectionHeader'
+import { services } from '../../data/siteContent'
+import SectionHeader from '../common/SectionHeader'
 
 const serviceIcons = [
   Store,
@@ -23,10 +23,10 @@ const serviceIcons = [
 ]
 
 const gradients = [
-  'from-emerald-500 via-lime-400 to-emerald-300',
-  'from-violet-500 via-fuchsia-400 to-pink-300',
+  'from-orange-500 via-orange-400 to-orange-300',
+  'from-violet-500 via-fuchsia-400 to-red-300',
   'from-sky-500 via-cyan-400 to-blue-300',
-  'from-orange-500 via-amber-400 to-yellow-300',
+  'from-orange-500 via-orange-400 to-orange-300',
 ]
 
 export default function Services() {
@@ -64,7 +64,7 @@ export default function Services() {
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-40" />
 
-      <div className="absolute left-0 top-10 h-72 w-72 rounded-full bg-emerald-300/20 blur-3xl" />
+      <div className="absolute left-0 top-10 h-72 w-72 rounded-full bg-orange-300/20 blur-3xl" />
       <div className="absolute right-0 top-1/2 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl">
@@ -96,9 +96,8 @@ export default function Services() {
 
                     {/* Glow */}
                     <div
-                      className={`absolute inset-0 bg-linear-to-br ${
-                        gradients[index % gradients.length]
-                      } opacity-10 blur-3xl transition duration-500 group-hover:opacity-20`}
+                      className={`absolute inset-0 bg-linear-to-br ${gradients[index % gradients.length]
+                        } opacity-10 blur-3xl transition duration-500 group-hover:opacity-20`}
                     />
 
                     <div className="relative grid min-h-[360px] items-center gap-6 p-5 lg:p-7">
@@ -108,9 +107,8 @@ export default function Services() {
 
                         <div>
                           <div
-                            className={`inline-flex rounded-full bg-linear-to-r ${
-                              gradients[index % gradients.length]
-                            } px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.18em] text-zinc-950`}
+                            className={`inline-flex rounded-full bg-linear-to-r ${gradients[index % gradients.length]
+                              } px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.18em] text-zinc-950`}
                           >
                             {service.eyebrow}
                           </div>
@@ -151,12 +149,12 @@ export default function Services() {
                             Core Metric
                           </p>
 
-                          <p className="mt-1 text-base font-black text-emerald-300">
+                          <p className="mt-1 text-base font-black text-orange-300">
                             {service.metric}
                           </p>
                         </div>
 
-                        <button className="premium-button inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-black text-zinc-950 transition hover:-translate-y-1 hover:bg-emerald-300">
+                        <button className="premium-button inline-flex items-center gap-2 rounded-2xl bg-white px-4 py-2.5 text-sm font-black text-zinc-950 transition hover:-translate-y-1 hover:bg-orange-300">
                           Explore
                           <ArrowRight size={16} />
                         </button>
@@ -172,7 +170,7 @@ export default function Services() {
           {/* Left Arrow */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-xl transition hover:scale-110 hover:bg-emerald-300 lg:grid"
+            className="absolute left-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-xl transition hover:scale-110 hover:bg-orange-300 lg:grid"
           >
             <ChevronLeft size={22} />
           </button>
@@ -180,7 +178,7 @@ export default function Services() {
           {/* Right Arrow */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-xl transition hover:scale-110 hover:bg-emerald-300 lg:grid"
+            className="absolute right-0 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 place-items-center rounded-2xl border border-zinc-200 bg-white text-zinc-950 shadow-xl transition hover:scale-110 hover:bg-orange-300 lg:grid"
           >
             <ChevronRight size={22} />
           </button>
@@ -191,11 +189,10 @@ export default function Services() {
               <button
                 key={index}
                 onClick={() => setActiveSlide(index)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  activeSlide === index
-                    ? 'w-10 bg-emerald-500'
+                className={`h-2.5 rounded-full transition-all duration-300 ${activeSlide === index
+                    ? 'w-10 bg-orange-500'
                     : 'w-2.5 bg-zinc-300 hover:bg-zinc-400'
-                }`}
+                  }`}
               />
             ))}
           </div>

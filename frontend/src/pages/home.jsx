@@ -1,47 +1,46 @@
-// src/pages/Home.jsx
+import { lazy, Suspense } from 'react'
 
-import ContactCta from '../components/ContactCta'
-import Faq from '../components/Faq'
-import Hero from '../components/Hero'
-// import MarketplaceExpertise from '../components/MarketplaceExpertise'
+import Hero from '../components/home/Hero'
+// import ProofStrip from '../components/ProofStrip'
 import Reveal from '../components/motion/Reveal'
-import Process from '../components/Process'
-import ProofStrip from '../components/ProofStrip'
-import Services from '../components/Services'
-import WhyChoose from '../components/WhyChoose'
+import SectionLoader from '../components/loaders/SectionLoader'
+
+const Services = lazy(() => import('../components/home/Services'))
+const WhyChoose = lazy(() => import('../components/home/WhyChoose'))
+const Process = lazy(() => import('../components/home/Process'))
+const Faq = lazy(() => import('../components/home/Faq'))
+const ContactCta = lazy(() => import('../components/common/ContactCta'))
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      <Reveal>
-        <ProofStrip />
-      </Reveal>
-
-      <Reveal>
-        <Services />
-      </Reveal>
-
       {/* <Reveal>
-        <MarketplaceExpertise />
+        <ProofStrip />
       </Reveal> */}
 
-      <Reveal>
-        <WhyChoose />
-      </Reveal>
+      <Suspense fallback={<SectionLoader />}>
+        <Reveal>
+          <Services />
+        </Reveal>
 
-      <Reveal>
-        <Process />
-      </Reveal>
+        <Reveal>
+          <WhyChoose />
+        </Reveal>
 
-      <Reveal>
-        <Faq />
-      </Reveal>
+        <Reveal>
+          <Process />
+        </Reveal>
 
-      <Reveal>
-        <ContactCta />
-      </Reveal>
+        <Reveal>
+          <Faq />
+        </Reveal>
+
+        <Reveal>
+          <ContactCta />
+        </Reveal>
+      </Suspense>
     </>
   )
 }

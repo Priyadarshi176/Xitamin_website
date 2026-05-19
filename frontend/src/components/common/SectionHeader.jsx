@@ -4,7 +4,7 @@ export default function SectionHeader({ eyebrow, title, description, align = 'le
 
   return (
     <div className={`max-w-3xl ${alignment}`}>
-      <p className={`text-sm font-black uppercase tracking-[0.18em] ${isDark ? 'text-emerald-300' : 'text-emerald-600'}`}>
+      <p className={`text-sm font-black uppercase tracking-[0.18em] ${isDark ? 'text-orange-300' : 'text-orange-600'}`}>
         {eyebrow}
       </p>
       <h2 className={`mt-3 text-3xl font-black leading-tight sm:text-5xl ${isDark ? 'text-white' : 'text-zinc-950'}`}>

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { contact, services } from '../data/siteContent'
-import { submitContactLead } from '../lib/api'
+import { contact, services } from '../../data/siteContent'
+import { submitContactLead } from '../../lib/api'
 
 const initialForm = {
   name: '',
@@ -40,21 +40,21 @@ export default function ContactCta() {
     <section id="contact" className="bg-zinc-950 px-5 py-24 lg:px-8">
       <div className="mx-auto grid max-w-7xl items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-emerald-300">Start with an audit</p>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-orange-300">Start with an audit</p>
           <h2 className="mt-3 text-3xl font-black text-white sm:text-5xl">Ready to make growth less random?</h2>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-zinc-300">
             Share your marketplace or website challenge and get a practical plan for the next stage.
           </p>
 
           <div className="mt-8 grid gap-3 text-sm font-semibold text-zinc-300">
-            <p className="border-l-2 border-emerald-300 pl-4">Response-first inquiry flow for seller brands.</p>
-            <p className="border-l-2 border-emerald-300 pl-4">Your request is stored securely in the backend lead system.</p>
+            <p className="border-l-2 border-orange-300 pl-4">Response-first inquiry flow for seller brands.</p>
+            <p className="border-l-2 border-orange-300 pl-4">Your request is stored securely in the backend lead system.</p>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={contact.whatsapp}
-              className="premium-button rounded-lg bg-white px-6 py-3.5 text-center text-sm font-black text-zinc-950 transition hover:-translate-y-0.5 hover:bg-emerald-300"
+              className="premium-button rounded-lg bg-white px-6 py-3.5 text-center text-sm font-black text-zinc-950 transition hover:-translate-y-0.5 hover:bg-orange-300"
             >
               WhatsApp now
             </a>
@@ -69,7 +69,7 @@ export default function ContactCta() {
 
         <form onSubmit={handleSubmit} className="rounded-lg border border-white/10 bg-white p-5 shadow-2xl shadow-zinc-950/25 sm:p-6">
           <div className="mb-6 border-b border-zinc-200 pb-5">
-            <p className="text-sm font-black uppercase tracking-[0.16em] text-emerald-600">Growth inquiry</p>
+            <p className="text-sm font-black uppercase tracking-[0.16em] text-orange-600">Growth inquiry</p>
             <h3 className="mt-2 text-2xl font-black text-zinc-950">Tell us where you want momentum.</h3>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -80,7 +80,7 @@ export default function ContactCta() {
                 name="name"
                 value={form.name}
                 onChange={updateField}
-                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-emerald-600 transition focus:border-emerald-600 focus:bg-white"
+                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-orange-600 transition focus:border-orange-600 focus:bg-white"
                 placeholder="Your name"
               />
             </label>
@@ -93,7 +93,7 @@ export default function ContactCta() {
                 name="email"
                 value={form.email}
                 onChange={updateField}
-                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-emerald-600 transition focus:border-emerald-600 focus:bg-white"
+                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-orange-600 transition focus:border-orange-600 focus:bg-white"
                 placeholder="you@example.com"
               />
             </label>
@@ -104,7 +104,7 @@ export default function ContactCta() {
                 name="phone"
                 value={form.phone}
                 onChange={updateField}
-                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-emerald-600 transition focus:border-emerald-600 focus:bg-white"
+                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-orange-600 transition focus:border-orange-600 focus:bg-white"
                 placeholder="+91..."
               />
             </label>
@@ -115,7 +115,7 @@ export default function ContactCta() {
                 name="service"
                 value={form.service}
                 onChange={updateField}
-                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-emerald-600 transition focus:border-emerald-600 focus:bg-white"
+                className="rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-orange-600 transition focus:border-orange-600 focus:bg-white"
               >
                 {services.map((service) => (
                   <option key={service.title} value={service.title}>
@@ -133,7 +133,7 @@ export default function ContactCta() {
               name="message"
               value={form.message}
               onChange={updateField}
-              className="min-h-32 rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-emerald-600 transition focus:border-emerald-600 focus:bg-white"
+              className="min-h-32 rounded-lg border border-zinc-300 bg-[#fbfbf8] px-4 py-3 font-medium outline-orange-600 transition focus:border-orange-600 focus:bg-white"
               placeholder="Tell us what you want to improve."
             />
           </label>
@@ -142,7 +142,7 @@ export default function ContactCta() {
             type="submit"
             disabled={status === 'loading'}
             aria-busy={status === 'loading'}
-            className="premium-button mt-5 w-full rounded-lg bg-zinc-950 px-6 py-3.5 text-sm font-black text-white shadow-lg shadow-zinc-950/15 transition hover:-translate-y-0.5 hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-70"
+            className="premium-button mt-5 w-full rounded-lg bg-zinc-950 px-6 py-3.5 text-sm font-black text-white shadow-lg shadow-zinc-950/15 transition hover:-translate-y-0.5 hover:bg-orange-700 disabled:cursor-not-allowed disabled:opacity-70"
           >
             {status === 'loading' ? 'Submitting...' : 'Submit inquiry'}
           </button>
@@ -151,7 +151,7 @@ export default function ContactCta() {
             <p
               role="status"
               className={`mt-4 rounded-lg px-4 py-3 text-sm font-bold ${
-                status === 'error' ? 'bg-red-50 text-red-700' : 'bg-emerald-50 text-emerald-700'
+                status === 'error' ? 'bg-red-50 text-red-700' : 'bg-orange-50 text-orange-700'
               }`}
             >
               {feedback}

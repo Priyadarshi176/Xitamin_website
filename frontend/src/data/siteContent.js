@@ -1,22 +1,13 @@
 export const navItems = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-<<<<<<< HEAD
-  { label: 'Blog', href: '/blog' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Marketplaces', href: '/#marketplaces' },
-  { label: 'Process', href: '/#process' },
-  { label: 'FAQ', href: '/#faq' },
-  { label: 'Contact', href: '/contact' },
-=======
   { label: 'E-Commerce', href: '/e-commerce' },
   { label: 'Financial', href: '/financial' },
   { label: 'Digital Marketing', href: '/digital-marketing' },
   { label: 'Tech Solutions', href: '/tech-solutions' },
   { label: 'Career', href: '/career' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '#contact' },
->>>>>>> 0b8a055853b9663f7cd1cad5191146b29635d3c6
+  { label: 'Contact', href: '/contact' },
 ]
 
 export const heroServices = [

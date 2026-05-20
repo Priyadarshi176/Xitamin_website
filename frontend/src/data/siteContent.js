@@ -7,7 +7,8 @@ export const navItems = [
   { label: 'Tech Solutions', href: '/tech-solutions' },
   { label: 'Career', href: '/career' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '/contact' },
+
 ]
 
 export const heroServices = [
@@ -85,15 +86,77 @@ export const services = [
 ]
 
 export const marketplaces = [
-  'Amazon',
-  'Flipkart',
-  'Myntra',
-  'Ajio',
-  'Blinkit',
-  'Tata Cliq',
-  'FirstCry',
-  'eBay',
-  'Amazon Global',
+  {
+    title: "Amazon",
+    logo: "/amazonLogo.png",
+    description:
+      "From listings to rankings — we help brands grow organically on Amazon.",
+    goto: "/e-commerce/amazon",
+    badge: "Organic SEO",
+  },
+
+  {
+    title: "Flipkart",
+    logo: "/flipkartLogo.png",
+    description:
+      "Optimized catalogs and visibility strategies designed for better conversions.",
+    goto: "/e-commerce/flipkart",
+    badge: "Marketplace Growth",
+  },
+
+  {
+    title: "Myntra",
+    logo: "/myntraLogo.png",
+    description:
+      "Fashion-focused marketplace management for premium brand visibility.",
+    goto: "/e-commerce/myntra",
+    badge: "Fashion Commerce",
+  },
+
+  {
+    title: "Ajio",
+    logo: "/ajio.png",
+    description:
+      "Helping fashion and lifestyle brands scale with organic marketplace reach.",
+    goto: "/e-commerce/ajio",
+    badge: "Brand Visibility",
+  },
+
+  {
+    title: "Blinkit",
+    logo: "/blinkit.png",
+    description:
+      "Quick-commerce optimization built for faster product discovery and reach.",
+    goto: "/e-commerce/blinkit",
+    badge: "Quick Commerce",
+  },
+
+  {
+    title: "Ebay",
+    logo: "/ebay.png",
+    description:
+      "Expand globally with optimized listings and international marketplace growth.",
+    goto: "/e-commerce/ebay",
+    badge: "Global Selling",
+  },
+
+  {
+    title: "FirstCry",
+    logo: "/firstcry.png",
+    description:
+      "Growth-focused marketplace management for baby and kids brands.",
+    goto: "/e-commerce/firstcry",
+    badge: "Kids Commerce",
+  },
+
+  {
+    title: "Tata Cliq",
+    logo: "/tatacliq.png",
+    description:
+      "Premium marketplace presence designed for trust, reach, and conversions.",
+    goto: "/e-commerce/tatacliq",
+    badge: "Premium Retail",
+  },
 ]
 
 export const reasons = [

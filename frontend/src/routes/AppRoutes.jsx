@@ -5,6 +5,10 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
+import NotFound from '../components/NotFound'
+import Ecommerce from '../pages/Ecommerce'
+import LogoModel from '../components/LogoModel'
+import Calculator from '../pages/Calculator'
 
 export default function AppRoutes() {
   return (
@@ -14,6 +18,10 @@ export default function AppRoutes() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/e-commerce" element={<Ecommerce />} />
+      <Route path="*" element={<NotFound/>} />
+      <Route path='/model' element={<LogoModel />} />
+      <Route path="/calculator" element={<Calculator/>}/>
     </Routes>
   )
 }

@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import { navItems } from '../../data/siteContent'
-
+import { useNavigate,useLocation } from 'react-router-dom'
 export default function Header() {
+
+  const routeTo = useNavigate();
+  const location = useLocation().pathname;
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenu, setMobileMenu] = useState(false)
 
@@ -32,7 +35,7 @@ export default function Header() {
         aria-label="Primary"
       >
         {/* Logo */}
-        <div className='h-15 w-60 border-black'>
+        <div className='h-15 w-50 border-black'>
           <img className='w-full h-full object-cover' src="blackLogo.png" alt="" />
         </div>
 
@@ -40,8 +43,8 @@ export default function Header() {
         <div className='flex gap-5 hidden lg:flex md:flex flex-wrap'>
           {navItems.map((item,i)=>{
             return(
-            <div key={i} onClick={()=>{window.location.href=item.href}} className="relative overflow-hidden h-6 cursor-pointer group">
-              <span className="block transition-transform duration-300 group-hover:-translate-y-full">
+            <div key={i} onClick={()=>{routeTo(`/${item.href}`)}} className="relative overflow-hidden h-6 cursor-pointer group">
+              <span className={`block transition-transform duration-300 group-hover:-translate-y-full ${location === `${item.href}` ? 'text-[#ff6200]' : ''}`}>
                 {item.label}
               </span>
 
@@ -120,4 +123,4 @@ export default function Header() {
     </header>
   )
 }
-// onClick={() => {document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});}}
+

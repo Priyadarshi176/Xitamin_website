@@ -1,4 +1,4 @@
-import { proofPoints } from '../data/siteContent'
+import { proofPoints } from '../../data/siteContent'
 
 export default function ProofStrip() {
   return (

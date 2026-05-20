@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 
 import Hero from '../components/home/Hero'
-// import ProofStrip from '../components/ProofStrip'
+import ProofStrip from '../components/home/ProofStrip'
 import Reveal from '../components/motion/Reveal'
 import SectionLoader from '../components/loaders/SectionLoader'
 
@@ -9,16 +9,18 @@ const Services = lazy(() => import('../components/home/Services'))
 const WhyChoose = lazy(() => import('../components/home/WhyChoose'))
 const Process = lazy(() => import('../components/home/Process'))
 const Faq = lazy(() => import('../components/home/Faq'))
+// const MPE = lazy(() => import('../components/MarketplaceExpertise'))
 const ContactCta = lazy(() => import('../components/common/ContactCta'))
+
 
 export default function Home() {
   return (
     <>
       <Hero />
 
-      {/* <Reveal>
+      <Reveal>
         <ProofStrip />
-      </Reveal> */}
+      </Reveal>
 
       <Suspense fallback={<SectionLoader />}>
         <Reveal>
@@ -28,6 +30,10 @@ export default function Home() {
         <Reveal>
           <WhyChoose />
         </Reveal>
+
+        {/* <Reveal>
+          <MPE />
+        </Reveal> */}
 
         <Reveal>
           <Process />

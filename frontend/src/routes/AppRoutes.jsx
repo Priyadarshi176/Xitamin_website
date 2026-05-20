@@ -9,6 +9,7 @@ import NotFound from '../components/NotFound'
 import Ecommerce from '../pages/Ecommerce'
 import LogoModel from '../components/LogoModel'
 import Calculator from '../pages/Calculator'
+import Plateform from '../pages/Plateform'
 
 export default function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ export default function AppRoutes() {
       <Route path="/blog/:slug" element={<BlogPost />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/e-commerce" element={<Ecommerce />} />
+      <Route path="/e-commerce/:platform" element={<Plateform />} />
       <Route path="*" element={<NotFound/>} />
       <Route path='/model' element={<LogoModel />} />
       <Route path="/calculator" element={<Calculator/>}/>

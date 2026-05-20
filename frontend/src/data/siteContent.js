@@ -114,7 +114,7 @@ export const marketplaces = [
 
   {
     title: "Ajio",
-    logo: "/ajio.png",
+    logo: "/ajioLogo.png",
     description:
       "Helping fashion and lifestyle brands scale with organic marketplace reach.",
     goto: "/e-commerce/ajio",
@@ -123,7 +123,7 @@ export const marketplaces = [
 
   {
     title: "Blinkit",
-    logo: "/blinkit.png",
+    logo: "/blinkitLogo.png",
     description:
       "Quick-commerce optimization built for faster product discovery and reach.",
     goto: "/e-commerce/blinkit",
@@ -132,7 +132,7 @@ export const marketplaces = [
 
   {
     title: "Ebay",
-    logo: "/ebay.png",
+    logo: "/ebayLogo.png",
     description:
       "Expand globally with optimized listings and international marketplace growth.",
     goto: "/e-commerce/ebay",
@@ -141,7 +141,7 @@ export const marketplaces = [
 
   {
     title: "FirstCry",
-    logo: "/firstcry.png",
+    logo: "/firstcryLogo.png",
     description:
       "Growth-focused marketplace management for baby and kids brands.",
     goto: "/e-commerce/firstcry",
@@ -150,7 +150,7 @@ export const marketplaces = [
 
   {
     title: "Tata Cliq",
-    logo: "/tatacliq.png",
+    logo: "/tatacliqLogo.png",
     description:
       "Premium marketplace presence designed for trust, reach, and conversions.",
     goto: "/e-commerce/tatacliq",

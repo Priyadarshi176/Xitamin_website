@@ -1,13 +1,13 @@
 import { marketplaces } from "../data/siteContent";
 import { ArrowUpRight } from "lucide-react";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Ecommerce() {
 
   const routeTo = useNavigate();
   return (
-    <section className="w-full min-h-screen overflow-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-4">
+    <section className="w-full overflow-hidden px-4 py-8 sm:px-6 sm:py-10 lg:px-8 lg:py-4">
+      <div className="absolute h-full inset-0 bg-grid opacity-70" />
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6">
         <div className="flex w-full max-w-4xl flex-col gap-2">
           <span className="text-xs font-semibold uppercase tracking-[0.25em] text-orange-500 sm:text-sm">

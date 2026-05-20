@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { navItems } from '../../data/siteContent'
 import { useNavigate,useLocation } from 'react-router-dom'
+import logo from "../../../public/blackLogo.png"
 export default function Header() {
 
   const routeTo = useNavigate();
@@ -36,7 +37,7 @@ export default function Header() {
       >
         {/* Logo */}
         <div className='h-15 w-50 border-black'>
-          <img className='w-full h-full object-cover' src="blackLogo.png" alt="" />
+          <img className='w-full h-full object-cover' src={logo} alt="" />
         </div>
 
         {/* Desktop Nav */}

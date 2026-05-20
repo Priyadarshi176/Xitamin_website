@@ -72,7 +72,7 @@ export default function Services() {
           eyebrow="Services"
           title="Growth systems designed for modern e-commerce brands"
           description="From marketplace scaling to branding, marketing, finance, and technology — every service is built to increase visibility, sales, and long-term growth."
-          align="center"
+          align="start"
         />
 
         {/* Slider */}

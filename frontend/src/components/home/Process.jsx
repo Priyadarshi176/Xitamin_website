@@ -40,7 +40,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="relative overflow-hidden bg-[#fcfcf8] px-5 py-24 lg:px-8"
+      className="relative overflow-hidden bg-[#fcfcf8] px-5 py-8 lg:px-8"
     >
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-40" />
@@ -52,11 +52,10 @@ export default function Process() {
         <SectionHeader
           eyebrow="Process"
           title="A streamlined workflow built for serious growth"
-          description="From onboarding to execution, every step is designed for clarity, speed, and measurable business outcomes."
-          align="center"
+          align="start"
         />
 
-        <div className="relative mt-20">
+        <div className="relative mt-10">
           {/* Timeline */}
           <div className="absolute left-1/2 top-10 hidden h-[85%] w-px -translate-x-1/2 bg-linear-to-b from-orange-300 via-zinc-300 to-transparent xl:block" />
 

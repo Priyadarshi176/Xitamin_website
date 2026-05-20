@@ -87,100 +87,11 @@ export default function Hero() {
               Book a consultation
             </a>
           </div>
-
-          {/* <div>
-            <LogoModel/>
-          </div> */}
-
-          {/* <div className="hero-tags mt-10 flex flex-wrap gap-2" aria-label="Xitamin service keywords">
-            {heroServices.map((service) => (
-              <span key={service} className="rounded-lg bg-white px-3 py-2 text-sm font-semibold text-zinc-700 shadow-sm">
-                {service}
-              </span>
-            ))}
-          </div> */}
         </div>
 
         <div>
           <LogoModel/>
         </div>
-
-        {/* <div className="hero-perspective relative">
-          <div className="hero-orbit hero-orbit-one" />
-          <div className="hero-orbit hero-orbit-two" />
-          <div
-            ref={panelRef}
-            style={panelStyle}
-            onMouseMove={handlePanelMove}
-            onMouseLeave={resetPanel}
-            className="hero-panel hero-panel-3d motion-card relative overflow-hidden rounded-lg border border-zinc-800 bg-zinc-950 p-5 text-white shadow-2xl shadow-zinc-950/25 sm:p-6"
-          >
-            <div className="hero-spotlight" />
-            <div className="flex items-center justify-between border-b border-white/10 pb-5">
-              <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-300">Xitamin command center</p>
-                <p className="mt-1 text-sm text-zinc-400">Seller growth overview</p>
-              </div>
-              <img
-                src={heroGraphic}
-                alt="Layered growth systems graphic for Xitamin"
-                className="float-slow h-16 w-16 object-contain sm:h-20 sm:w-20"
-                loading="eager"
-              />
-            </div>
-
-            <div className="grid gap-5 py-6 lg:grid-cols-[1fr_0.82fr]">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-orange-300">Growth desk</p>
-                <h2 className="mt-3 text-3xl font-black leading-tight">
-                  One operating team for serious online sellers.
-                </h2>
-                <div className="mt-6 grid gap-3">
-                  {heroSignals.map((signal) => (
-                    <div key={signal.label} className="hero-signal flex items-center justify-between border-b border-white/10 pb-3">
-                      <span>
-                        <span className="block text-sm font-semibold text-zinc-300">{signal.label}</span>
-                        <span className="mt-1 block text-xs font-bold uppercase tracking-[0.14em] text-zinc-500">
-                          {signal.state}
-                        </span>
-                      </span>
-                      <span className="rounded-md bg-orange-400/10 px-2.5 py-1 text-xs font-black text-orange-300">
-                        {signal.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 lg:grid-cols-1">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="border-l border-orange-300/40 pl-4">
-                    <p className="text-2xl font-black text-white">{stat.value}</p>
-                    <p className="mt-1 text-sm leading-5 text-zinc-400">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="grid gap-3 border-t border-white/10 pt-5 sm:grid-cols-3" aria-label="Growth workflow">
-              {['Audit', 'Optimize', 'Scale'].map((item, index) => (
-                <div key={item} className="rounded-lg bg-white/5 p-4">
-                  <span className="mb-2 block text-xs font-black uppercase tracking-[0.16em] text-orange-300">
-                    0{index + 1}
-                  </span>
-                  <span className="font-black text-white">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-4 grid grid-cols-3 gap-3">
-            {['Amazon', 'Flipkart', 'SEO'].map((item) => (
-              <div key={item} className="hero-mini-card rounded-lg border border-zinc-200 bg-white/85 p-3 text-center text-sm font-black text-zinc-900 shadow-sm">
-                {item}
-              </div>
-            ))}
-          </div>
-        </div> */}
       </div>
     </section>
   )

@@ -29,13 +29,11 @@ export default function About() {
         <AboutMission />
       </Reveal>
 
-      <Reveal>
-        <AboutTimeline />
-      </Reveal>
+      <AboutTimeline />
 
-      <Reveal>
+      
         <TeamValues />
-      </Reveal>
+      
 
       <Suspense fallback={<SectionLoader />}>
         <Reveal>

@@ -8,6 +8,7 @@ export const navItems = [
   { label: 'Career', href: '/career' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
+
 ]
 
 export const heroServices = [

@@ -1,5 +1,5 @@
 import { marketplaces } from '../data/siteContent'
-import SectionHeader from '../components/common/SectionHeader'
+import SectionHeader from './common/SectionHeader'
 
 const marketplaceDetails = {
   Amazon: {
@@ -51,7 +51,7 @@ const marketplaceDetails = {
     glow: 'from-sky-400/20 via-cyan-300/10 to-transparent',
     border: 'group-hover:border-sky-300/60',
   },
-  eBay: {
+  Ebay: {
     tag: 'Cross-border selling',
     description: 'International product exposure and global marketplace operations.',
     metric: 'Worldwide reach support',
@@ -88,11 +88,13 @@ export default function MarketplaceExpertise() {
 
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {marketplaces.map((marketplace, index) => {
-            const details = marketplaceDetails[marketplace]
+            const details = marketplaceDetails[marketplace.title]
+
+            if (!details) return null
 
             return (
               <article
-                key={marketplace}
+                key={marketplace.title}
                 className={`motion-card group relative overflow-hidden rounded-3xl border border-zinc-200 bg-white/80 p-6 backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-zinc-900/10 ${details.border}`}
               >
                 <div
@@ -107,7 +109,7 @@ export default function MarketplaceExpertise() {
                       </span>
 
                       <h3 className="mt-5 text-3xl font-black tracking-tight text-zinc-950">
-                        {marketplace}
+                        {marketplace.title}
                       </h3>
                     </div>
 

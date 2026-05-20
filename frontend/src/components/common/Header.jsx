@@ -120,7 +120,4 @@ export default function Header() {
     </header>
   )
 }
-<<<<<<< HEAD:frontend/src/components/common/Header.jsx
-=======
 // onClick={() => {document.getElementById("contact")?.scrollIntoView({behavior: "smooth"});}}
->>>>>>> 0b8a055853b9663f7cd1cad5191146b29635d3c6:frontend/src/components/Header.jsx

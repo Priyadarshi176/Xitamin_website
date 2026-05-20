@@ -1,12 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-<<<<<<< HEAD:frontend/src/components/home/Hero.jsx
 import heroGraphic from '../../assets/hero.png'
 import { heroRotatingWords, heroServices, heroSignals, stats } from '../../data/siteContent'
-=======
-import heroGraphic from '../assets/hero.png'
-import { heroRotatingWords, heroServices, heroSignals, stats } from '../data/siteContent'
-import LogoModel from './LogoModel'
->>>>>>> 0b8a055853b9663f7cd1cad5191146b29635d3c6:frontend/src/components/Hero.jsx
+import LogoModel from '../LogoModel'
 
 export default function Hero() {
   const [activeWordIndex, setActiveWordIndex] = useState(0)

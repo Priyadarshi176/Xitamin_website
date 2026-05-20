@@ -7,12 +7,16 @@ import CursorGlow from '../components/motion/CursorGlow'
 import PageLoader from '../components/motion/PageLoader'
 import ScrollProgress from '../components/motion/ScrollProgress'
 import CalculateIcon from '@mui/icons-material/Calculate';
+import AssistantIcon from '@mui/icons-material/Assistant';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { useState } from 'react'
 
 export default function MainLayout({ children }) {
 
   const routeTo = useNavigate();
   const location = useLocation().pathname;
+
+  const [showAssistant, setShowAssistant] = useState(false);
 
 
   return (
@@ -25,6 +29,10 @@ export default function MainLayout({ children }) {
       {location !== "/calculator" && <div onClick={()=>{routeTo("/calculator")}} className='fixed bottom-5 z-30 p-5 bg-[#ff6200] rounded-full left-5 cursor-pointer'>
         <CalculateIcon sx={{color:"white",fontSize:40}}/>
       </div>}
+
+      <div className='fixed bottom-5 z-30 p-5 bg-[#ff6200] rounded-full right-5 cursor-pointer'>
+        <AssistantIcon sx={{color:"white",fontSize:40}}/>
+      </div>
       
       <main id="main-content">
         {children}

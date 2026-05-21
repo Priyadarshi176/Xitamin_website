@@ -1,4 +1,5 @@
 import { contact, navItems } from '../../data/siteContent'
+import logo from "../../assets/whiteLogo.png"
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <div className="w-80 h-15">
-            <img className='w-full h-full scale-[1.2] object-cover' src="whiteLogo.png" alt="" />
+            <img className='w-full h-full scale-[1.2] object-cover' src={logo} alt="" />
           </div>
           <p className="mt-4 max-w-md leading-7 text-whiteSmoke-200">
             We’re dedicated to planting the right digital seeds for your business to grow — naturally and effectively. 

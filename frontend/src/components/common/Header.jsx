@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { navItems } from '../../data/siteContent'
 import { useNavigate,useLocation } from 'react-router-dom'
-import logo from "../../../public/blackLogo.png"
+import logo from "../../assets/blackLogo.png"
 export default function Header() {
 
   const routeTo = useNavigate();
